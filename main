@@ -1,0 +1,25 @@
+print("Welcome to the file reader and writer.")
+soru = input("Do you want to read or write files? (r/w)")
+if soru == "r":
+    print("you have selected the reading mode.")
+    yer = input("Please write the location of your file (like C:/user/users/desktop))")
+    uzanti = input("Please enter the extension of the file. (example .txt)")
+    oku = str(yer) + str(uzanti)
+    dosya = open(oku , "r")
+    print(dosya.read())
+elif soru == "w":
+    print("You have chosen to create a file")
+    alinan = input("Please enter your text.")
+    alinan2 = input("Please choose a name for your file.")
+    alinan3 = input("Please choose the format of your file (example .py)")
+    alinan4 = input("Do you want to add anything to your code? (Y/N)")
+    if alinan4 == "Y":
+        alinan5 = input("Please write the text to be added.")
+        yenikod = str(alinan) + str(alinan5)
+        ad = str(alinan2) + str(alinan3)
+        dosya = open(ad, "w")
+        dosya.write(yenikod)
+    else:
+        ad = str(alinan2) + str(alinan3)
+        dosya = open(ad, "w")
+        dosya.write(alinan)
